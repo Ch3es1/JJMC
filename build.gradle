@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+    id 'io.papermc.paperweight.userdev' version '1.7.1'
+}
+
+java {
+    toolchain.languageVersion.set(JavaLanguageVersion.of(21))
+}
+
+repositories {
+}
+
+dependencies {
+    paperweight.paperDevBundle("1.21.11-R0.1-SNAPSHOT")
+}
+
+tasks.jar {
+    archiveBaseName.set("JJMC")
+    archiveVersion.set("1.0")
+
+}

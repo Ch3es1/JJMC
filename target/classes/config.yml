@@ -1,0 +1,71 @@
+abilities:
+  dash: 5
+  blink: 15
+  sprint: 20
+
+  sukuna_primary: 0
+  sukuna_secondary: 0
+  sukuna_ultimate: 61
+
+  builder_primary: 20
+  builder_secondary: 90
+  builder_ultimate: 180
+
+  gojo_primary: 10
+  gojo_secondary: 20
+  gojo_ultimate: 16
+
+  mace_primary: 30
+  mace_secondary: 30
+  mace_ultimate: 120
+
+  miner_primary: 60
+  miner_secondary: 60
+  miner_ultimate: 60
+
+  villager_primary: 120
+  villager_secondary: 180
+  villager_ultimate: 600
+
+  swordmaster_primary: 60
+  swordmaster_secondary: 30
+  swordmaster_ultimate: 120
+
+  berserker_primary: 60
+  berserker_secondary: 120
+  berserker_ultimate: 120
+
+  duelist_primary: 5
+  duelist_secondary: 25
+  duelist_ultimate: 240
+
+  demon_primary: 60
+  demon_secondary: 120
+  demon_ultimate: 300
+
+  dragonborn_primary: 60
+  dragonborn_secondary: 120
+  dragonborn_ultimate: 240
+
+class-pools:
+  default:
+    - runner
+    - builder
+    - mace
+    - miner
+    - villager
+    - swordmaster
+    - berserker
+    - duelist
+    - demon
+    - dragonborn
+
+  sukuna:
+    - sukuna
+
+  gojo:
+    - gojo
+
+player-pools:
+  camsbald: sukuna
+  Sil1ym0nk3y: gojo

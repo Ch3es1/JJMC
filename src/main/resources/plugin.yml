@@ -1,0 +1,24 @@
+name: JJMC
+version: 1.1-RELEASE
+main: me.camsbald.jJMC.JJMC
+api-version: 1.20
+
+commands:
+  ability:
+    description: "Use your class ability"
+    usage: /ability <primary/secondary/ultimate>
+  setclass:
+    description: "Set a player's class"
+    usage: /setclass <player> <class>
+  classes:
+    description: "Get all classes"
+    usage: /classes
+  reroll:
+    description: "Reroll current class"
+    usage: /reroll
+  giveitem:
+    description: "Get a custom item id"
+    usage: /giveitem <player> <itemId>
+  classinfo:
+    description: "Get current class + abilites + passive(s)"
+    usage: /classinfo
