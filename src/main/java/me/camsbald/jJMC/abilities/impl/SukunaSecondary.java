@@ -1,6 +1,7 @@
 package me.camsbald.jJMC.abilities.impl;
 
 import me.camsbald.jJMC.abilities.Ability;
+import me.camsbald.jJMC.manager.ClassManager;
 import org.bukkit.Material;
 import org.bukkit.Particle;
 import org.bukkit.Sound;
@@ -104,9 +105,13 @@ public class SukunaSecondary implements Ability {
 
         for (Entity entity : world.getNearbyEntities(loc, 0.7, 0.7, 0.7)) {
             if (entity instanceof LivingEntity target && !target.equals(player) && hitEntities.add(target)) {
-                target.damage(20, player);
-                target.setHealth(0.0);
-                target.setVelocity(knockDir.clone().multiply(3));
+                if (!ClassManager.getPlayerClass(target.getUniqueId())
+                        .getPassives().stream()
+                        .anyMatch(p -> p.getId().equals("sukuna_passive"))) {
+                    target.damage(20, player);
+                    target.setHealth(0.0);
+                    target.setVelocity(knockDir.clone().multiply(3));
+                }
             }
         }
 
