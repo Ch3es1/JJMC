@@ -40,7 +40,7 @@ public class Reroll_Token_Recipe {
                 "GDG");
 
         recipe.setIngredient('D', Material.DIAMOND_BLOCK);
-        recipe.setIngredient('N', Material.NETHER_STAR);
+        recipe.setIngredient('N', Material.NETHERITE_INGOT);
         recipe.setIngredient('G', Material.GOLD_BLOCK);
         recipe.setIngredient('R', Material.REDSTONE_BLOCK);
 
