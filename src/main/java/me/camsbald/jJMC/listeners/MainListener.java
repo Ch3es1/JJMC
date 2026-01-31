@@ -41,7 +41,7 @@ public class MainListener implements Listener {
         }
 
         applyPassives(player); // ✅ apply passives every join
-        player.sendMessage("Welcome to JJMC, Do /classinfo for clas info");
+        welcomeMessage(player);
     }
 
     @EventHandler
@@ -58,7 +58,8 @@ public class MainListener implements Listener {
         ClassManager.unmarkDead(player);
     }
 
-    public void sendTellraw(Player player) {
+    public void welcomeMessage(Player player) {
+        player.sendMessage("Welcome to JJMC, Do /classinfo for clas info");
         player.sendMessage("Go Here For Plugin Credits, & Source Code: ");
         Component message = Component.text("Github Link", NamedTextColor.GREEN)
                 .decorate(TextDecoration.BOLD)
