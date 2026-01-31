@@ -105,13 +105,9 @@ public class SukunaPrimary implements Ability {
 
         for (Entity entity : world.getNearbyEntities(loc, 0.7, 0.7, 0.7)) {
             if (entity instanceof LivingEntity target && !target.equals(player) && hitEntities.add(target)) {
-                if (!ClassManager.getPlayerClass(target.getUniqueId())
-                        .getPassives().stream()
-                        .anyMatch(p -> p.getId().equals("sukuna_passive"))) {
-                    target.damage(20, player);
-                    target.setHealth(0.0);
-                    target.setVelocity(knockDir.clone().multiply(3));
-                }
+                target.damage(20, player);
+                target.setHealth(0.0);
+                target.setVelocity(knockDir.clone().multiply(3));
             }
         }
 
