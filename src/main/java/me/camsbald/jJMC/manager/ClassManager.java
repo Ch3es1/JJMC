@@ -15,7 +15,7 @@ import java.util.*;
 
 public class ClassManager {
 
-    private static final Map<String, PlayerClass> classRegistry = new HashMap<>();
+    public static final Map<String, PlayerClass> classRegistry = new HashMap<>();
     private static final Map<UUID, PlayerClass> playerClasses = new HashMap<>();
     public static PlayerDataManager dataManager;
 
