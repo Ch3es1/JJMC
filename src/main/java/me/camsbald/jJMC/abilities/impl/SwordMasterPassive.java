@@ -25,11 +25,11 @@ public class SwordMasterPassive implements Ability {
 
     @Override
     public void use(Player player) {
-        player.addPotionEffect(new PotionEffect(PotionEffectType.STRENGTH, Integer.MAX_VALUE, 2, false, false, true));
+        player.addPotionEffect(new PotionEffect(PotionEffectType.STRENGTH, Integer.MAX_VALUE, 0, false, false, true));
         player.addPotionEffect(new PotionEffect(PotionEffectType.RESISTANCE, Integer.MAX_VALUE, 0, false, false, true));
     }
 
     public String getDescription() {
-        return "Gives you Strength III & Resistance I";
+        return "Gives you Strength I & Resistance I";
     }
 }

@@ -118,7 +118,7 @@ public class SukunaPassive implements Ability, Listener {
         double damage = event.getDamage();
 
         if (event.getFinalDamage() >= victim.getHealth()) {
-            event.setCancelled(true);
+            event.setDamage(victim.getHealth()/10);
             victim.heal(event.getFinalDamage());
         }
         if (victim.getLocation().getWorld().getMinHeight() > victim.getLocation().getY()) {
