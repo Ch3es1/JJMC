@@ -267,23 +267,6 @@ public class SukunaPassive implements Ability, Listener {
 
         return removedSomething;
     }
-    @EventHandler
-    public void onMove(PlayerMoveEvent e) {
-        Player player = e.getPlayer();
-
-        // Only Sukuna passive players
-        if (!ClassManager.getPlayerClass(player.getUniqueId())
-                .getPassives().stream()
-                .anyMatch(p -> p.getId().equals("sukuna_passive"))) return;
-
-
-        Material m = player.getLocation().getBlock().getType();
-        if (m == Material.WATER || m == Material.LAVA) {
-            Vector direction = player.getLocation().getDirection().normalize();
-            Vector velocity = player.getVelocity().add(direction.multiply(0.1));
-            player.setVelocity(velocity);
-        }
-    }
 
     public String getDescription() {
         return "Invincible or sum idk";
