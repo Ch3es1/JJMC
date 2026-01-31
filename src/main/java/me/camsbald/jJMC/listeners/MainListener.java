@@ -3,7 +3,6 @@ package me.camsbald.jJMC.listeners;
 import me.camsbald.jJMC.JJMC;
 import me.camsbald.jJMC.classes.PlayerClass;
 import me.camsbald.jJMC.manager.ClassManager;
-import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -15,10 +14,6 @@ import net.kyori.adventure.text.format.NamedTextColor;
 import net.kyori.adventure.text.event.ClickEvent;
 import net.kyori.adventure.text.event.HoverEvent;
 import net.kyori.adventure.text.format.TextDecoration;
-import org.bukkit.entity.Player;
-
-import java.util.HashSet;
-import java.util.UUID;
 
 import static me.camsbald.jJMC.manager.ClassManager.*;
 
