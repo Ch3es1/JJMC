@@ -130,7 +130,7 @@ public class SwordMasterPrimary implements Ability {
 
         for (Entity entity : world.getNearbyEntities(loc, 0.7, 0.7, 0.7)) {
             if (entity instanceof LivingEntity target && !target.equals(player)) {
-                target.damage(800, player);
+                target.damage(40, player);
                 target.setVelocity(knockDir.clone().multiply(3));
                 removedSomething = true;
             }

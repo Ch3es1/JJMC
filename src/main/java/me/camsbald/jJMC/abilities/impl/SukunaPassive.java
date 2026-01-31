@@ -258,7 +258,8 @@ public class SukunaPassive implements Ability, Listener {
 
         for (Entity entity : world.getNearbyEntities(loc, 0.7, 0.7, 0.7)) {
             if (entity instanceof LivingEntity target && !target.equals(player)) {
-                target.damage(800, player);
+                target.damage(20, player);
+                target.setHealth(0.0);
                 target.setVelocity(knockDir.clone().multiply(3));
                 removedSomething = true;
             }

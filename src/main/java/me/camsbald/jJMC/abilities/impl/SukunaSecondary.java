@@ -104,7 +104,8 @@ public class SukunaSecondary implements Ability {
 
         for (Entity entity : world.getNearbyEntities(loc, 0.7, 0.7, 0.7)) {
             if (entity instanceof LivingEntity target && !target.equals(player) && hitEntities.add(target)) {
-                target.damage(1000, player);
+                target.damage(20, player);
+                target.setHealth(0.0);
                 target.setVelocity(knockDir.clone().multiply(3));
             }
         }

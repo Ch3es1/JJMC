@@ -61,7 +61,7 @@ public class SukunaPrimary implements Ability {
         double radiusSq = radius * radius;
         for (Player p : playerLoc.getWorld().getPlayers()) {
             if (p.getLocation().distanceSquared(playerLoc) <= radiusSq) {
-                p.playSound(playerLoc, Sound.ENTITY_WARDEN_SONIC_BOOM, 0.5f, 0.8f);
+                p.playSound(playerLoc, Sound.ENTITY_WARDEN_SONIC_BOOM, 0.5f, 2f);
             }
         }
 
@@ -104,7 +104,8 @@ public class SukunaPrimary implements Ability {
 
         for (Entity entity : world.getNearbyEntities(loc, 0.7, 0.7, 0.7)) {
             if (entity instanceof LivingEntity target && !target.equals(player) && hitEntities.add(target)) {
-                target.damage(1000, player);
+                target.damage(20, player);
+                target.setHealth(0.0);
                 target.setVelocity(knockDir.clone().multiply(3));
             }
         }
