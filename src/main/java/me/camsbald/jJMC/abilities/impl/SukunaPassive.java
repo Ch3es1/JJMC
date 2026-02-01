@@ -115,8 +115,6 @@ public class SukunaPassive implements Ability, Listener {
                 .getPassives().stream()
                 .anyMatch(p -> p.getId().equals("sukuna_passive"))) return;
 
-        double damage = event.getDamage();
-
         if (event.getFinalDamage() >= victim.getHealth()) {
             event.setDamage(victim.getHealth()/10);
             victim.heal(event.getFinalDamage());
