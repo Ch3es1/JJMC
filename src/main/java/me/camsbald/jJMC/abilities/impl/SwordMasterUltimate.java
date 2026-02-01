@@ -110,7 +110,7 @@ public class SwordMasterUltimate implements Ability {
         // Only damage entities once
         for (Entity entity : world.getNearbyEntities(loc, 0.7, 0.7, 0.7)) {
             if (entity instanceof LivingEntity target && !target.equals(player) && hitEntities.add(target)) {
-                target.damage(10, player);
+                target.damage(2.5, player);
                 target.setVelocity(knockDir.clone().multiply(3));
             }
         }
