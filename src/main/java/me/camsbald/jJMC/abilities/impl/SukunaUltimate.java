@@ -53,16 +53,6 @@ public class SukunaUltimate implements Ability, Listener {
 
         caster.sendMessage("§cSukuna Ultimate activated! Domain Expansion!");
 
-        // --- Apply Weakness & Darkness to all players except caster/runner ---
-        for (Player p : Bukkit.getOnlinePlayers()) {
-            PlayerClass pc = getPlayerClass(p.getUniqueId());
-            if (p.equals(caster)) continue;
-            if (pc != null && pc.getId().equals("runner")) continue;
-
-            p.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, durationSeconds * 20, 1));
-            p.addPotionEffect(new PotionEffect(PotionEffectType.DARKNESS, durationSeconds * 20, 1));
-        }
-
         // --- Gradual Domain Task ---
         task = new BukkitRunnable() {
             int ticksElapsed = 0;
