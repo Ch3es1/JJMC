@@ -2,7 +2,11 @@ package me.camsbald.jJMC.listeners;
 
 import me.camsbald.jJMC.JJMC;
 import me.camsbald.jJMC.classes.PlayerClass;
+import me.camsbald.jJMC.items.CustomItem;
+import me.camsbald.jJMC.items.CustomItemManager;
 import me.camsbald.jJMC.manager.ClassManager;
+import org.bukkit.enchantments.Enchantment;
+import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -14,6 +18,7 @@ import net.kyori.adventure.text.format.NamedTextColor;
 import net.kyori.adventure.text.event.ClickEvent;
 import net.kyori.adventure.text.event.HoverEvent;
 import net.kyori.adventure.text.format.TextDecoration;
+import org.bukkit.inventory.ItemStack;
 
 import static me.camsbald.jJMC.manager.ClassManager.*;
 
@@ -37,6 +42,15 @@ public class MainListener implements Listener {
 
         applyPassives(player); // ✅ apply passives every join
         welcomeMessage(player);
+
+        if (ClassManager.getPlayerClass(player.getUniqueId())
+                .getPassives().stream()
+                .anyMatch(p -> p.getId().equals("gojo_passive"))) {
+            CustomItem item = CustomItemManager.getById("hollow_purple");
+            ItemStack playerItem = item.getItem();
+            playerItem.addEnchantment(Enchantment.VANISHING_CURSE, 1);
+            player.getInventory().addItem(playerItem);
+        }
     }
 
     @EventHandler
