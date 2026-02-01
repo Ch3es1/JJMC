@@ -45,7 +45,7 @@ public class MinerSecondary implements Ability {
 
                 AttributeInstance SCALE = player.getAttribute(Attribute.SCALE);
                 if (SCALE != null) {
-                    SCALE.setBaseValue(0.5);
+                    SCALE.setBaseValue(0.45);
                 }
 
                 if (ticks >= durationSeconds * 20) {
