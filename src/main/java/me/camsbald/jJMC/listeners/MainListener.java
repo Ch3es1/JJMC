@@ -48,7 +48,7 @@ public class MainListener implements Listener {
                 .anyMatch(p -> p.getId().equals("gojo_passive"))) {
             CustomItem item = CustomItemManager.getById("hollow_purple");
             ItemStack playerItem = item.getItem();
-            playerItem.addEnchantment(Enchantment.VANISHING_CURSE, 1);
+            playerItem.addUnsafeEnchantment(Enchantment.VANISHING_CURSE, 1);
             player.getInventory().addItem(playerItem);
         }
     }
