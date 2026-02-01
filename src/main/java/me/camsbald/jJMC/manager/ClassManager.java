@@ -144,7 +144,10 @@ public class ClassManager {
         player.setFlySpeed(0.1f);
 
         for (PotionEffect effect : player.getActivePotionEffects()) {
-            player.removePotionEffect(effect.getType());
+            if (effect.getType() != PotionEffectType.HEALTH_BOOST) {
+                player.removePotionEffect(effect.getType());
+            }
+
         }
 
         if (pc == null) return;

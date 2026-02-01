@@ -26,12 +26,11 @@ public class DragonBornPassive implements Ability {
     @Override
     public void use(Player player) {
         player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, Integer.MAX_VALUE, 0, false, false, true));
-        player.addPotionEffect(new PotionEffect(PotionEffectType.STRENGTH, Integer.MAX_VALUE, 1, false, false, true));
+        player.addPotionEffect(new PotionEffect(PotionEffectType.STRENGTH, Integer.MAX_VALUE, 0, false, false, true));
         player.addPotionEffect(new PotionEffect(PotionEffectType.RESISTANCE, Integer.MAX_VALUE, 0, false, false, true));
-        player.addPotionEffect(new PotionEffect(PotionEffectType.HEALTH_BOOST, Integer.MAX_VALUE, 4, false, false, true));
     }
 
     public String getDescription() {
-        return "Gives you permanent Strength II, Fire Resistance, & Resistance + an Extra Row of Hearts";
+        return "Gives you permanent Strength I, Fire Resistance, & Resistance";
     }
 }
