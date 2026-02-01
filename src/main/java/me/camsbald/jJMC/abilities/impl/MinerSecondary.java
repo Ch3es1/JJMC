@@ -36,17 +36,17 @@ public class MinerSecondary implements Ability {
     @Override
     public void use(Player player) {
         int durationSeconds = 10;
-        AttributeInstance SCALE = player.getAttribute(Attribute.SCALE);
-        if (SCALE != null) {
-            SCALE.setBaseValue(0.5);
-        }
-
         new BukkitRunnable() {
             int ticks = 0;
 
             @Override
             public void run() {
                 ticks++;
+
+                AttributeInstance SCALE = player.getAttribute(Attribute.SCALE);
+                if (SCALE != null) {
+                    SCALE.setBaseValue(0.5);
+                }
 
                 if (ticks >= durationSeconds * 20) {
                     applyPassives(player);

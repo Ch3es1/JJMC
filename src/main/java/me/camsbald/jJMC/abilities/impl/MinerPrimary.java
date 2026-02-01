@@ -47,8 +47,29 @@ public class MinerPrimary implements Ability {
             item.addUnsafeEnchantment(Enchantment.UNBREAKING, 5);
             item.addUnsafeEnchantment(Enchantment.FORTUNE, 10);
             player.sendMessage("§aYour pickaxe has been enchanted!");
+        } else if (item.getType() == Material.WOODEN_AXE ||
+                item.getType() == Material.STONE_AXE ||
+                item.getType() == Material.IRON_AXE ||
+                item.getType() == Material.GOLDEN_AXE ||
+                item.getType() == Material.DIAMOND_AXE ||
+                item.getType() == Material.NETHERITE_AXE) {
+            item.addUnsafeEnchantment(Enchantment.EFFICIENCY, 10);
+            item.addUnsafeEnchantment(Enchantment.SHARPNESS, 5);
+            item.addUnsafeEnchantment(Enchantment.UNBREAKING, 5);
+            item.addUnsafeEnchantment(Enchantment.FORTUNE, 10);
+            player.sendMessage("§aYour axe has been enchanted!");
+        } else if (item.getType() == Material.WOODEN_SWORD ||
+                item.getType() == Material.STONE_SWORD ||
+                item.getType() == Material.IRON_SWORD ||
+                item.getType() == Material.GOLDEN_SWORD ||
+                item.getType() == Material.DIAMOND_SWORD ||
+                item.getType() == Material.NETHERITE_SWORD) {
+            item.addUnsafeEnchantment(Enchantment.SHARPNESS, 5);
+            item.addUnsafeEnchantment(Enchantment.UNBREAKING, 5);
+            item.addUnsafeEnchantment(Enchantment.LOOTING, 10);
+            player.sendMessage("§aYour sword has been enchanted!");
         } else {
-            player.sendMessage("§cYou must be holding a pickaxe to use this ability!");
+            player.sendMessage("§cYou must be holding a pickaxe/axe/sword to use this ability!");
         }
     }
 
